@@ -9,10 +9,9 @@ import papaparse from "https://jslib.k6.io/papaparse/5.1.1/index.js";
 
 export const options = {
   stages: [
-    { target: 1, duration: "5s" },
-    /*{ target: 80, duration: "40s" },
-    { target: 300, duration: "30s" },
-    { target: 700, duration: "20s" },*/
+    { target: 5, duration: "10s" },
+    { target: 5, duration: "30s" },
+    { target: 0, duration: "5s" },
   ],
   thresholds: {
     http_req_duration: ["p(95)<1200", "p(99)<1500"],
